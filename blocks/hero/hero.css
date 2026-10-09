@@ -5,33 +5,65 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  isolation: isolate;
+  padding: var(--space-lg) var(--gutter);
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.hero > div {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  max-width: 18ch;
+  margin-top: 0;
+  color: inherit;
+  line-height: 1.05;
 }
 
+/* large text for contrast */
+.hero p {
+  max-width: 40em;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.hero a:any-link:not(.button) {
+  color: inherit;
+}
+
+/* white button */
+.hero a.button.primary {
+  border-color: var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+}
+
+.hero a.button.primary:hover {
+  border-color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-background);
+}
+
+/* background image */
 .hero picture {
   position: absolute;
   z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
 }
 
 .hero img {
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding-block: var(--space-xl);
   }
 }

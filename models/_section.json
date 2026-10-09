@@ -33,6 +33,14 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Surface (light gray)",
+              "value": "surface"
+            },
+            {
+              "name": "Dark",
+              "value": "dark"
             }
           ]
         }
@@ -50,7 +58,8 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "contact-form"
       ]
     }
   ]
