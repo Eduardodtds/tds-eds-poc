@@ -1,0 +1,49 @@
+.contact-form form {
+  display: grid;
+  gap: var(--space-sm);
+  max-width: 720px;
+}
+
+.contact-form .contact-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-form label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--color-text-muted);
+  border-radius: 0;
+  padding: 0.7em 0.8em;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.contact-form button {
+  justify-self: start;
+}
+
+@media (width >= 900px) {
+  .contact-form form {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-md);
+  }
+
+  .contact-form .contact-form-company,
+  .contact-form .contact-form-message {
+    grid-column: 1 / -1;
+  }
+}

@@ -136,6 +136,36 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Surface (light gray)",
+            "value": "surface"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Links (whole card clickable)",
+            "value": "links"
+          },
+          {
+            "name": "Numbered (01, 02, 03...)",
+            "value": "numbered"
           }
         ]
       }
@@ -176,6 +206,18 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "contact-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "submitLabel",
+        "label": "Button label",
+        "value": "Send"
       }
     ]
   },
