@@ -138,6 +138,16 @@ export default async function decorate(block) {
     if (wrapper) wrapper.className = '';
   }
 
+  const picture = navBrand.querySelector('picture');
+  if (picture && !picture.closest('a')) {
+    const logoLink = document.createElement('a');
+    logoLink.href = '/';
+    logoLink.setAttribute('aria-label', 'thedigital.support home');
+    // logo links home
+    picture.replaceWith(logoLink);
+    logoLink.append(picture);
+  }
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
